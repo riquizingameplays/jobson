@@ -1,0 +1,45 @@
+#include <Servo.h>
+Servo s1,s2,s3,s4,s5;
+
+const int pot1 = A0;
+const int pot1 = A1;
+const int pot1 = A2;
+const int pot1 = A3;
+const int pot1 = A4;
+
+const int bot1 = 2;
+const int bot2 = 3;
+
+void setup()
+{
+  //pinMode(led1,OUTPUT);
+  s1.attach(3);
+  s2.attach(5);
+  s3.attach(6);
+  s4.attach(9);
+  s5.attach(10);
+  Serial.begin(9600);
+  pinMode(bot1,INPUT_PULLUP);
+  pinMode(bot2,INPUT_PULLUP);
+  
+}
+
+int var1, var2, var3, var4, var5, var6, var7;
+void loop(){
+  
+  var1 = analogRead(pot1);
+  var2 = analogRead(pot2);
+  var3 = analogRead(pot3);
+  var4 = analogRead(pot4);
+  var5 = analogRead(pot5);
+  var6 = digitalRead(bot1);
+  var7 = digitalRead(bot2);
+  
+  Serial.println(var2);
+  
+  //s1.write(map(var1,0,1023,0,180));
+  //s2.write(map(var1,0,1023,0,180));
+  //s3.write(map(var1,0,1023,0,180));
+  //s4.write(map(var1,0,1023,0,180));
+  //s5.write(map(var1,0,1023,0,180));
+}
